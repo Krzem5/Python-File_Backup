@@ -5,7 +5,6 @@ desc=Python-File_Backup
 public=true
 homepage=
 license=mit
-remote=
 
 file.readme=.\README.md
 file.gitignore=.\.gitignore
