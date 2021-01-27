@@ -3,7 +3,6 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 from tkinter import messagebox as mbox
-import ntpath
 import os
 import pickle
 import time;
@@ -62,7 +61,7 @@ print("Zipping finished in %.2f%%s (zip_size=%i B)"%(time.time()-st,s))
 
 
 cdata=None
-if (ntpath.exists("token.pickle")):
+if (os.path.exists("token.pickle")):
 	with open("token.pickle","rb") as t:
 		cdata=pickle.load(t)
 if (not cdata or not cdata.valid):
